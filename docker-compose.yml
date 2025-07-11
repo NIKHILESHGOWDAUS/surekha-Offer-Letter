@@ -5,7 +5,7 @@ services:
     container_name: Congratulations_backend
     build: ./Backend
     ports:
-      - "3607:3607"
+      - "3612:3612"
     depends_on:
       - postgres
     environment:
@@ -14,7 +14,7 @@ services:
       - PGPASSWORD=admin123
       - PGDATABASE=employee_portals
       - PGPORT=5432
-      - PORT=3607
+      - PORT=3612
     volumes:
       - ./Backend/public:/app/public
     networks:
@@ -54,7 +54,7 @@ services:
     container_name: Congratulations_postgres
     image: postgres:13
     ports:
-      - "5607:5432"
+      - "5612:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin123
